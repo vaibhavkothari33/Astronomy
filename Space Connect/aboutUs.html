@@ -1,127 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us</title>
+    <link
+      rel="shortcut icon"
+      href="./images/rocket-icon.png"
+      type="image/png"
+    />
+    <link rel="stylesheet" href="./CSS/aboutUs/aboutUs.css" />
+    <link rel="stylesheet" href="./CSS/common/navBar.css" />
+    <link rel="stylesheet" href="./CSS/common/cartBox.css" />
+    <link rel="stylesheet" href="./CSS/common/userBox.css" />
+    <link rel="stylesheet" href="./CSS/common/bg-animation.css" />
+    <link rel="stylesheet" href="./CSS/common/earthMoonAnimation.css" />
+    <link rel="stylesheet" href="./CSS/common/loader.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us</title>
-  <link rel="shortcut icon" href="./images/rocket-icon.png" type="image/png">
-  <link rel="stylesheet" href="./CSS/aboutUs/aboutUs.css" />
-  <link rel="stylesheet" href="./CSS/common/navBar.css" />
-  <link rel="stylesheet" href="./CSS/common/cartBox.css" />
-  <link rel="stylesheet" href="./CSS/common/userBox.css" />
-  <link rel="stylesheet" href="./CSS/common/bg-animation.css" />
-  <link rel="stylesheet" href="./CSS/common/earthMoonAnimation.css" />
-  <link rel="stylesheet" href="./CSS/common/loader.css" />
+  <body onload="myFunction()">
+    <!-- ############## Page Loading Animation ############### -->
+    <div id="loader-wrapper" class="load-wrapper" style="display: flex">
+      <div class="loader"></div>
+    </div>
+    <!-- ############## Page Loading Animation - End ############### -->
 
-</head>
+    <div id="body" style="display: none">
+      <!-- ############## Navigation Bar ############### -->
+      <nav>
+        <div class="logo"><img class="logo" src="final fr.png" alt="" /></div>
+        <ul id="navbar-links">
+          <li><a class="navbar-a1" href="index.html">Home</a></li>
+          <li><a class="navbar-a1" href="./aboutUs.html">About Us</a></li>
+          <li>
+            <a class="navbar-a1" href="latest.html">Events</a>
+          </li>
+          <li>
+            <a class="navbar-a1" href="latestnews.html" target="_blank"
+              >Latest News</a
+            >
+          </li>
+          <li>
+            <a
+              class="navbar-a1"
+              href="https://bennettu-my.sharepoint.com/personal/e22bspu0005_bennett_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fe22bspu0005%5Fbennett%5Fedu%5Fin%2FDocuments%2FAstrophotography%202%2E0%20photographs&ga=1"
+              target="_blank"
+              >Photos</a
+            >
+          </li>
+          <!-- <li><a class="navbar-a1" href="./contactUs.html">Contact Us</a></li> -->
+        </ul>
+        <div class="nav-links">
+          <ul></ul>
+        </div>
+      </nav>
+      <!-- ############## Navigation Bar - End ############### -->
 
-<body onload="myFunction()">
+      <!-- ############## User Image Hover Box - End ############### -->
 
-  <!-- ############## Page Loading Animation ############### -->
-  <div id="loader-wrapper" class="load-wrapper" style="display:flex;">
-    <div class="loader"></div>
-  </div>
-  <!-- ############## Page Loading Animation - End ############### -->
-
-  <div id="body" style="display:none;">
-
-    <!-- ############## Navigation Bar ############### -->
-    <nav>
-      <div class="logo"><img class="logo" src="final fr.png" alt=""></div>
-      <ul id="navbar-links">
-        <li><a class="navbar-a1" href="index.html">Home</a></li>
-        <li><a class="navbar-a1" href="./aboutUs.html">About Us</a></li>
-        <li>
-          <a class="navbar-a1" href="latest.html" 
-            >Events</a
-          >
-        </li>
-        <li>
-          <a class="navbar-a1" href="latestnews.html" target="_blank"
-            >Latest News</a
-          >
-        </li>
-        <li>
-          <a class="navbar-a1" href="https://bennettu-my.sharepoint.com/personal/e22bspu0005_bennett_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fe22bspu0005%5Fbennett%5Fedu%5Fin%2FDocuments%2FAstrophotography%202%2E0%20photographs&ga=1" target="_blank"
-            >Photos</a
-          >
-        </li>
-        <!-- <li><a class="navbar-a1" href="./contactUs.html">Contact Us</a></li> -->
-      </ul>
-      <div class="nav-links">
-        <ul></ul>
-      </div>
-    </nav>
-    <!-- ############## Navigation Bar - End ############### -->
-
-  
-    <!-- ############## User Image Hover Box - End ############### -->
-
-    <!-- ############## Earth - Moon Animation ############### -->
-    <article class="earth-demo">
-
-      <!-- ############## Background Star Animation ############### -->
-      <div class="wrapper">
-        <div id="stars"></div>
-        <div id="stars2"></div>
-        <div id="stars3"></div>
-      </div>
-      <!-- ############## Background Star Animation - End ############### -->
-      <div class="earth">
-        <div class="more-info">
-          <div class="vision">
-            <h1>Our Vision</h1>
-            <p class="vision-desc">Welcome to the Astronomy Club at Bennett University! We are a group of passionate stargazers, curious minds, and space enthusiasts dedicated to exploring the wonders of the universe. Our club provides a platform for students to learn about celestial phenomena, engage in discussions, and participate in exciting activities like telescope viewing, night sky observation sessions, and space-themed events. Whether you're an experienced astronomer or just starting to look up at the stars, our club offers a welcoming environment to share knowledge and foster a love for the cosmos.</p>
-            
-        
-          </div>
-          <!-- <div class="mission">
+      <!-- ############## Earth - Moon Animation ############### -->
+      <article class="earth-demo">
+        <!-- ############## Background Star Animation ############### -->
+        <div class="wrapper">
+          <div id="stars"></div>
+          <div id="stars2"></div>
+          <div id="stars3"></div>
+        </div>
+        <!-- ############## Background Star Animation - End ############### -->
+        <div class="earth">
+          <div class="more-info">
+            <div class="vision">
+              <h1>Our Vision</h1>
+              <p class="vision-desc">
+                They say reach for the stars, we say "Conquer the Cosmos" The
+                Astronomy club at Bennett University aims for skyrocketing
+                higher than the celestia as we conduct astronomical events on
+                campus that keep Bennetians informed, updated and engaged in the
+                cosmic events with exciting games and activities including
+                astronomy themed movie nights where we screen "stellar" movies
+                for the students, celestial debates and discussions, space
+                themed scavenger hunts, and astrophotography events that keep
+                the students engaged in the cosmos and makes them want to learn
+                more. Join us if you have the spark to fire up your engine and
+                let's roam to the endless supercluster of opportunities
+                together.
+              </p>
+            </div>
+            <!-- <div class="mission">
             <h1>Our Mission</h1>
             <p class="vision-desc">Build a global network of space-themed retail destinations.</p>
           </div> -->
-
-
+          </div>
+          <img src="./images/aboutUsAssets/earth.png" />
         </div>
-        <img src="./images/aboutUsAssets/earth.png">
-      </div>
-      <div class="moon-container">
-        <div class="moon">
-          <img src="./images/aboutUsAssets/moon.png">
+        <div class="moon-container">
+          <div class="moon">
+            <img src="./images/aboutUsAssets/moon.png" />
+          </div>
         </div>
-      </div>
-    </article>
-    <!-- ############## Earth - Moon Animation ############### -->
+      </article>
+      <!-- ############## Earth - Moon Animation ############### -->
+    </div>
 
-  </div>
+    <!-- ############## Footer ############### -->
+    <div id="footer">
+      <br /><br /><br /><br />
+      <p>Astronomy 2024 - Bennett University</p>
+    </div>
+    <!-- ############## Footer - End ############### -->
 
-  <!-- ############## Footer ############### -->
-  <div id="footer">
-    <br><br><br><br>
-    <p>Astronomy 2024 - Bennett University</p>
-  </div>
-  <!-- ############## Footer - End ############### -->
+    <!-- ############## Scripts ############### -->
+    <script src="./JavaScript/aboutUs.js" type="text/javascript"></script>
+    <script src="./JavaScript/userBox.js" type="text/javascript"></script>
+    <script>
+      var myVar;
 
+      function myFunction() {
+        myVar = setTimeout(showPage, 3000);
+      }
 
-  <!-- ############## Scripts ############### -->
-  <script src="./JavaScript/aboutUs.js" type="text/javascript"></script>
-  <script src="./JavaScript/userBox.js" type="text/javascript"></script>
-  <script>
-    var myVar;
-
-    function myFunction() {
-      myVar = setTimeout(showPage, 3000);
-    }
-
-    function showPage() {
-      document.getElementById("loader-wrapper").style.display = "none";
-      document.getElementById("body").style.display = "block";
-      document.getElementById("footer").style.visibility = "visible";
-    }
-  </script>
-  <!-- ############## Scripts - End ############### -->
-
-</body>
-
+      function showPage() {
+        document.getElementById("loader-wrapper").style.display = "none";
+        document.getElementById("body").style.display = "block";
+        document.getElementById("footer").style.visibility = "visible";
+      }
+    </script>
+    <!-- ############## Scripts - End ############### -->
+  </body>
 </html>
