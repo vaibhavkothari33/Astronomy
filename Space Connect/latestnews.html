@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Space Connect</title>
+  <link rel="shortcut icon" href="./images/rocket-icon.png" type="image/png">
+  <link rel="stylesheet" href="./CSS/common/navBar.css" />
+  <link rel="stylesheet" href="./CSS/common/cartBox.css" />
+  <link rel="stylesheet" href="./CSS/common/userBox.css" />
+  <link rel="stylesheet" href="./CSS/common/bg-animation.css" />
+  <link rel="stylesheet" href="./CSS/common/loader.css" />
+  <link rel="stylesheet" href="./CSS/common/footer.css" />
+  <link rel="stylesheet" href="./CSS/landingPage/style.css" />
+  <link rel="stylesheet" href="./CSS/landingPage/parallaxScene.css" />
+  <link rel="stylesheet" href="./CSS/landingPage/slider.css" />
+  <link rel="stylesheet" href="./CSS/landingPage/carousel.css" />
+  <link rel="stylesheet" href="./CSS/landingPage/pushable-button.css" />
+</head>
+
+<body onload="myFunction()">
+
+  <!-- ############## Page Loading Animation ############### -->
+  <div id="loader-wrapper" class="load-wrapper" style="display: flex;">
+    <div class="loader"></div>
+  </div>
+  
+  <div id="body" style="display: none;">
+    <!-- Background Star Animation -->
+    <section class="wrapper">
+      <div id="stars"></div>
+      <div id="stars2"></div>
+      <div id="stars3"></div>
+    </section>
+  
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo"><img class="logo" src="final fr.png" alt=""></div>
+        <ul id="navbar-links">
+          <li><a class="navbar-a1" href="index.html">Home</a></li>
+          <li><a class="navbar-a1" href="./aboutUs.html">About Us</a></li>
+          <li>
+            <a class="navbar-a1" href="latest.html" 
+              >Events</a
+            >
+          </li>
+          <li>
+            <a class="navbar-a1" href="latestnews.html" target="_blank"
+              >Latest News</a
+            >
+          </li>
+          <li>
+            <a class="navbar-a1" href="https://bennettu-my.sharepoint.com/personal/e22bspu0005_bennett_edu_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fe22bspu0005%5Fbennett%5Fedu%5Fin%2FDocuments%2FAstrophotography%202%2E0%20photographs&ga=1" target="_blank"
+              >Photos</a
+            >
+          </li>
+          <!-- <li><a class="navbar-a1" href="./contactUs.html">Contact Us</a></li> -->
+        </ul>
+        <div class="nav-links">
+          <ul></ul>
+        </div>
+      </nav>
+
+    <!-- Upcoming Events -->
+    <header class="ScriptHeader">
+        <style>
+          .ScriptHeader {
+            padding-top: 100px; /* Increased padding to account for fixed navbar */
+            margin-bottom: 2rem; /* Add space between header and events */
+          }
+          
+          .rt-heading h1 {
+            color: #fff;
+            margin: 0;
+            padding: 0;
+          }
+        </style>
+        <div class="rt-container">
+          <div class="col-rt-12">
+            <div class="rt-heading">
+              <h1 style="font-size: 32px;" >Upcoming Astronomical Events</h1>
+            </div>
+          </div>
+        </div>
+      </header>
+      
+     <!-- Upcoming Events Section -->
+<!-- Upcoming Events Section -->
+
+  <div class="events-container">
+    <style>
+        .events-container {
+            max-width: 1300px;
+            margin: 0 auto;
+            margin-top: 80px;
+            padding: 0 1rem;
+        }
+
+        .event-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .event-item {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            padding: 1.25rem; /* Reduced padding */
+            transition: transform 0.2s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .event-item:hover {
+            transform: translateY(-3px);
+        }
+
+        .event-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.75rem; /* Reduced margin */
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            padding-bottom: 0.5rem;
+        }
+
+        .event-name {
+            color: #fff;
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+
+        .event-date {
+            color: #e6e6e6;
+            font-size: 1rem;
+            background: rgba(255, 255, 255, 0);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+        }
+
+        .event-summary-container {
+            display: flex; /* Use flexbox for summary and image */
+            align-items: flex-start; /* Align items to the start */
+            margin-top: 0.5rem; /* Added small top margin */
+        }
+
+        .event-image {
+            max-width: 300px; /* Set a max width for the image */
+            margin-right: 1rem; /* Add space between image and summary */
+            border-radius: 5px; /* Optional: add border radius to the image */
+        }
+
+        .event-summary {
+            color: #e6e6e6;
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+
+        .event-button-container {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 0.5rem; /* Added small top margin */
+        }
+
+        .event-button {
+            max-width: 200px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: none;
+            padding: 0.5rem 1.25rem;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+            margin: 0;
+        }
+
+        .event-button:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .ScriptHeader {
+                padding-top: 80px;
+            }
+
+            .event-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+
+            .event-name {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+
+    <ul class="event-list">
+        <li class="event-item">
+            <div class="event-header">
+                <span class="event-name">Geminid meteor shower</span>
+                <span class="event-date">December 13-14, 2024</span>
+            </div>
+            <div class="event-summary-container">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvmSL4SrreB09c0JKDTWi_1mks9C_g2Y61pQ&s" alt="Geminid meteor shower" class="event-image" />
+                <p class="event-summary">
+                    The Geminid meteor shower will peak on December 13-14, 2024, renowned for its bright and multi-colored meteors, making it one of the best meteor showers of the year. With an expected peak rate of around 120 meteors per hour, the Geminids are known for their slow-moving meteors, which often leave long-lasting trails. This year, observers can enjoy ideal conditions due to a new moon, ensuring darker skies. The Geminids are unique because their origin is linked to an asteroid (3200 Phaethon) rather than a comet, setting them apart from most other meteor showers.
+                </p>
+            </div>
+            <div class="event-button-container">
+                <button class="event-button" onclick="window.location.href='https://earthsky.org/astronomy-essentials/everything-you-need-to-know-geminid-meteor-shower/';">Read More</button>
+            </div>
+        </li>
+        <li class="event-item">
+            <div class="event-header">
+                <span class="event-name">Quadrantid Meteor Shower</span>
+                <span class="event-date">January 3-4, 2025</span>
+            </div>
+            <div class="event-summary-container">
+                
+                <img src="data:image/jpeg;base64,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" alt="Quadrantid Meteor Shower" class="event-image" />
+                <p class="event-summary">
+                    The Quadrantid meteor shower will peak on the night of January 3-4, 2025. Known for producing bright meteors that can leave glowing trails, the Quadrantids are unique due to their short peak duration, often lasting just a few hours. This year, the shower will coincide with a new moon, providing ideal viewing conditions. Observers in the Northern Hemisphere can expect rates of up to 120 meteors per hour during the peak.
+                </p>
+            </div>
+            <div class="event-button-container">
+                <button class="event-button" onclick="window.location.href='https://www.timeanddate.com/astronomy/meteor-shower/quadrantids.html    ';">Read More</button>
+            </div>
+        </li>
+        <li class="event-item">
+            <div class="event-header">
+                <span class="event-name">Mars Opposition</span>
+                <span class="event-date">January 12, 2025</span>
+            </div>
+            <div class="event-summary-container">
+                <img src="https://lowell.edu/wp-content/uploads/2020/10/MARS1-696x391-1.jpg" alt="Mars Opposition" class="event-image" />
+                <p class="event-summary">
+                    In 2025, amateur astronomers will have the chance to observe a spectacular Mars opposition. This phenomenon occurs every 26 months when Mars and the Earth align directly opposite the Sun, making Mars appear as a "brilliant red star" in the constellation of Gemini. At opposition, Mars shines brighter than usual and offers excellent visibility for skywatchers. The average distance of Mars from the Sun is about 142 million miles (1.52 astronomical units), and it completes an orbit in about 687 days. The opposition brings the Earth and Mars closer, providing an ideal time for detailed observations.
+                </p>
+            </div>
+            <div class="event-button-container">
+                <button class="event-button" onclick="window.location.href='https://www.explorescientific.com/pages/mars-2024-2025-opposition#:~:text=The%20closest%20approach%20of%20Mars,the%20Earth%20from%20the%20Sun.';">Read More</button>
+            </div>
+        </li>
+        <li class="event-item">
+            <div class="event-header">
+                <span class="event-name">Total Lunar Eclipse</span>
+                <span class="event-date">March 14, 2025</span>
+            </div>
+            <div class="event-summary-container">
+                <img src="https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/CD6FC3RC2RG2TJVQJM4PEN2TNE.jpg&w=800&h=600" alt="Total Lunar Eclipse" class="event-image" />
+                <p class="event-summary">
+                    A total lunar eclipse will occur on March 14, 2025, during which the Earth will completely cover the moon, casting it into a shadow that typically turns it a deep red color, often referred to as a "blood moon." This eclipse will be visible in North America, Europe, and parts of Asia, making it accessible to a wide audience. The event provides an excellent opportunity for amateur astronomers and photographers to capture the beautiful transformation of the moon as it moves through the Earth's shadow.
+                </p>
+            </div>
+            <div class="event-button-container">
+                <button class="event-button" onclick="window.location.href='https://www.timeanddate.com/eclipse/lunar/2025-march-14';">Read More</button>
+            </div>
+        </li>
+    </ul>
+</div>
+  
+  <header class="Past-events">
+    <style>
+      .Past-events {
+        padding-top: 10px; /* Increased padding to account for fixed navbar */
+        margin-bottom: 2rem; /* Add space between header and events */
+      }
+      
+      .rt-heading h1 {
+        color: #fff;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    <div class="rt-container">
+      <div class="col-rt-12">
+        <div class="rt-heading">
+          <h1>Past Astronomical Events Of The Year</h1>
+        </div>
+      </div>
+    </div>
+  </header>
+    
+  <div class="events-container">
+    <style>
+        .events-container {
+            max-width: 1300px;
+            margin: 0 auto;
+            margin-top: 80px;
+            padding: 0 1rem;
+        }
+
+        .event-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .event-item {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            padding: 1.25rem; /* Reduced padding */
+            transition: transform 0.2s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .event-item:hover {
+            transform: translateY(-3px);
+        }
+
+        .event-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.75rem; /* Reduced margin */
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            padding-bottom: 0.5rem;
+        }
+
+        .event-name {
+            color: #fff;
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+
+        .event-date {
+            color: #e6e6e6;
+            font-size: 1rem;
+            background: rgba(255, 255, 255, 0);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+        }
+
+        .event-summary-container {
+            display: flex; /* Use flexbox for summary and image */
+            align-items: flex-start; /* Align items to the start */
+            margin-top: 0.5rem; /* Added small top margin */
+        }
+
+        .event-image {
+            max-width: 300px; /* Set a max width for the image */
+            margin-right: 1rem; /* Add space between image and summary */
+            border-radius: 5px; /* Optional: add border radius to the image */
+        }
+
+        .event-summary {
+            color: #e6e6e6;
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+
+        .event-button-container {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 0.5rem; /* Added small top margin */
+        }
+
+        .event-button {
+            max-width: 200px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: none;
+            padding: 0.5rem 1.25rem;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+            margin: 0;
+        }
+
+        .event-button:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .ScriptHeader {
+                padding-top: 80px;
+            }
+
+            .event-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+
+            .event-name {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+    <section class="wrapper">
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+      </section>
+    <ul class="event-list">
+        <li class="event-item">
+            <div class="event-header">
+                <span class="event-name">SpaceX's Historic Booster Capture in Starship Flight 5</span>
+                <span class="event-date">October 13</span>
+            </div>
+            <div class="event-summary-container">
+                <img src="https://static.euronews.com/articles/stories/08/78/76/66/1200x675_cmsv2_2c185cbc-34fc-592c-a663-fb0aa7a871f7-8787666.jpg" alt="SpaceX Starship" class="event-image" />
+                <p class="event-summary">
+                    On October 13, 2024, SpaceX successfully launched its Starship vehicle for the fifth time, achieving a historic milestone by catching the Super Heavy booster with the launch tower's "chopsticks" after liftoff. The booster landed precisely near the Mechazilla tower, showcasing advanced recovery technology. While the Starship upper stage also completed its mission to space, it ultimately exploded upon returning to the ocean. This event marks a significant advancement in reusable rocket technology for SpaceX.
+                </p>
+            </div>
+            <div class="event-button-container">
+                <button class="event-button" onclick="window.location.href='https://www.space.com/spacex-starship-flight-5-launch-super-heavy-booster-catch-success-video';">Read More</button>
+            </div>
+        </li>
+        <li class="event-item">
+            <div class="event-header">
+                <span class="event-name">Comet Tsuchinshan-ATLAS</span>
+                <span class="event-date">October 12-19</span>
+            </div>
+            <div class="event-summary-container">
+                <img src="https://www.astronomy.com/uploads/2024/10/GianniTumino_COMET_ETNA_50mm_JPG_3500pix-1200x800.jpg" alt="Comet Tsuchinshan-ATLAS" class="event-image" />
+                <p class="event-summary">
+                    Comet Tsuchinshan-ATLAS, a recently discovered comet, will make its closest approach to Earth between October 12 and 19, offering a unique opportunity for observation. Depending on its brightness, the comet may even be visible to the naked eye, making it one of the year's more exciting celestial events. As it passes, stargazers will be able to track the comet's position through a telescope or binoculars.
+                </p>
+            </div>
+            <div class="event-button-container">
+                <button class="event-button" onclick="window.location.href='https://www.timeanddate.com/astronomy/sights-to-see.html';">Read More</button>
+            </div>
+        </li>
+
+        <li class="event-item">
+            <div class="event-header">
+                <span class="event-name">Partial Lunar Eclipse</span>
+                <span class="event-date">September 18</span>
+            </div>
+            <div class="event-summary-container">
+                <img src="https://s7d2.scene7.com/is/image/TWCNews/11-08-2022_Total_Lunar_Eclipse_B_Anthony_Leone" alt="Partial Lunar Eclipse" class="event-image" />
+                <p class="event-summary">
+                    A partial lunar eclipse will occur on the night of September 18, where part of the moon will pass through Earth's shadow. The eclipse will be visible from much of the Americas, Europe, and Africa. The event begins around 10:12 p.m. Eastern Time, reaches its peak at 10:44 p.m., and ends by 11:17 p.m. Unlike solar eclipses, no special equipment is required to observe a lunar eclipse, making this an accessible event for viewers in the right regions.
+                </p>
+            </div>
+            <div class="event-button-container">
+                <button class="event-button" onclick="window.location.href='https://www.timeanddate.com/astronomy/sights-to-see.html';">Read More</button>
+            </div>
+        </li>
+
+        <li class="event-item">
+            <div class="event-header">
+                <span class="event-name">Perseid Meteor Shower</span>
+                <span class="event-date">August 11-13</span>
+            </div>
+            <div class="event-summary-container">
+                <img src="https://cdn.mos.cms.futurecdn.net/k7PBj2GGYSVbvrfFt2CcXR-650-80.jpg.webp" alt="Perseid Meteor Shower" class="event-image" />
+                <p class="event-summary">
+                    The Perseids are one of the most anticipated meteor showers of the year, often considered the best due to their high activity and bright meteors. They peak on the night of August 12 and into the early morning of August 13, with 50 to 100 meteors per hour visible in ideal conditions. The shower is caused by debris from Comet Swift-Tuttle, and it is especially enjoyable due to warm summer weather. This year, while the moon will be half-illuminated, it will set around midnight, giving observers a few hours of good visibility in the early morning.
+                </p>
+            </div>
+            <div class="event-button-container">
+                <button class="event-button" onclick="window.location.href='https://www.timeanddate.com/astronomy/sights-to-see.html';">Read More</button>
+            </div>
+        </li>
+        <li class="event-item">
+            <div class="event-header">
+                <span class="event-name">Eta Aquarid Meteor Shower</span>
+                <span class="event-date">April 15-May 27</span>
+            </div>
+            <div class="event-summary-container">
+                <img src="https://cdn.mos.cms.futurecdn.net/tqGkDyPpMSYcYyMemgJWzS.jpg" alt="Eta Aquarid Meteor Shower" class="event-image" />
+                <p class="event-summary">
+                    This meteor shower, caused by Halley's Comet, is best visible in the Southern Hemisphere but can also be seen in the Northern Hemisphere. The Eta Aquarids are known for their fast meteors, which can travel at speeds of up to 148,000 miles per hour. The shower will peak on the morning of May 6, and due to the new moon occurring around the same time, skywatchers should enjoy clear, dark skies for optimal viewing. The best time to observe this shower is in the pre-dawn hours, with meteors appearing to radiate from the constellation Aquarius.
+                </p>
+            </div>
+            <div class="event-button-container">
+                <button class="event-button" onclick="window.location.href='https://www.smithsonianmag.com/science-nature/nine-dazzling-celestial-events-to-watch-in-2024-180983505/';">Read More</button>
+            </div>
+        </li>
+        <li class="event-item">
+            <div class="event-header">
+                <span class="event-name">Lyrids Meteor Shower</span>
+                <span class="event-date">April 16-25</span>
+            </div>
+            <div class="event-summary-container">
+                <img src="https://www.youcanseethemilkyway.com/wp-content/uploads/2022/10/db30a2e7-9880-4778-8f12-aacd80dc2218_1920x1080.jpg" alt="Lyrids Meteor Shower" class="event-image" />
+                <p class="event-summary">
+                    The Lyrids meteor shower is one of the oldest known meteor showers, with historical records dating back to 687 BCE. This annual event produces around 10 to 15 meteors per hour at its peak on April 22. The meteors originate from debris left behind by Comet Thatcher. This year, viewing conditions might be hampered by the bright moon, which will be almost full on April 23. For the best view, observers should look away from the radiant point in the constellation Lyra to catch longer meteors streaking across the sky.
+                </p>
+            </div>
+            <div class="event-button-container">
+                <button class="event-button" onclick="window.location.href='https://www.smithsonianmag.com/science-nature/nine-dazzling-celestial-events-to-watch-in-2024-180983505/';">Read More</button>
+            </div>
+        </li>
+    </ul>
+</div>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+  <script src="./JavaScript/loader.js" type="text/javascript"></script>
+  <script src="./JavaScript/userBox.js" type="text/javascript"></script>
+  <script src="./JavaScript/index.js" type="text/javascript"></script>
+</body>
+
+</html>

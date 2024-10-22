@@ -10,11 +10,13 @@ article, header, section, aside, details, figcaption, figure, footer, header, hg
   #sectionthree{
     height: 60vh;
   }
-  .imageee{
-    object-fit: cover;
-    height: 250px;
-    margin-top: 5px;
-    width: 350px;
+  
+  .imageee {
+      width: 80%; /* Makes the image take up 100% of its container's width */
+      max-width: 600px; /* Ensures it doesn't exceed 400px width */
+      height: auto; /* Maintains aspect ratio */
+      display: block; /* Remove any gaps and align properly */
+      margin: 0 auto; /* Center the image horizontally */
   }
   h2 {
     color: #1a0e0e;
@@ -445,42 +447,42 @@ article, header, section, aside, details, figcaption, figure, footer, header, hg
   }
   
   .carousel__item:nth-child(1) .carousel-content {
-    background: url(../../images/landingPageAssets/satellite-kit1.png);
+    /* background: url(../../images/landingPageAssets/satellite-kit1.png); */
     background-repeat: no-repeat;
     background-size: 120%;
     background-position: center;
   }
   
   .carousel__item:nth-child(2) .carousel-content {
-    background: url(../../images/landingPageAssets/telescope.jpg);
+    /* background: url(../../images/landingPageAssets/telescope.jpg); */
     background-repeat: no-repeat;
     background-size: 105%;
     background-position: center;
   }
   
   .carousel__item:nth-child(3) .carousel-content {
-    background: url(../../images/landingPageAssets/books.jpg);
+    /* background: url(../../images/landingPageAssets/books.jpg); */
     background-repeat: no-repeat;
     background-size: 105%;
     background-position: center;
   }
   
   .carousel__item:nth-child(4) .carousel-content {
-    background: url(../../images/landingPageAssets/hoodie.png);
+    /* background: url(../../images/landingPageAssets/hoodie.png); */
     background-repeat: no-repeat;
     background-size: 125%;
     background-position: -30px -15px;
   }
   
   .carousel__item:nth-child(5) .carousel-content {
-    background: url(../../images/landingPageAssets/satellite-phone.png);
+    /* background: url(../../images/landingPageAssets/satellite-phone.png); */
     background-repeat: no-repeat;
     background-size: 165%;
     background-position: center;
   }
   
   .carousel__item:nth-child(6) .carousel-content {
-    background: url(../../images/landingPageAssets/space-food.png);
+    /* background: url(../../images/landingPageAssets/space-food.png); */
     background-repeat: no-repeat;
     background-size: 120%;
     background-position: center;
