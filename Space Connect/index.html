@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Space Connect</title>
+    <link
+      rel="shortcut icon"
+      href="./images/rocket-icon.png"
+      type="image/png"
+    />
+    <link rel="stylesheet" href="./CSS/landingPage/style.css" />
+    <link rel="stylesheet" href="./CSS/common/navBar.css" />
+    <link rel="stylesheet" href="./CSS/landingPage/parallaxScene.css" />
+    <link rel="stylesheet" href="./CSS/landingPage/slider.css" />
+    <link rel="stylesheet" href="./CSS/landingPage/carousel.css" />
+    <!-- <link rel="stylesheet" href="./CSS/landingPage/pushable-button.css" /> -->
+    <link rel="stylesheet" href="./CSS/common/bg-animation.css" />
+    <link rel="stylesheet" href="./CSS/common/loader.css" />
+    <link rel="stylesheet" href="./CSS/common/footer.css" />
+  </head>
+  <style>
+   
+ 
+  </style>
+  <!-- <body> -->
+  <body onload="myFunction()">
+    <!-- ############## Page Loading Animation ############### -->
+    <div id="loader-wrapper" class="load-wrapper" style="display: flex">
+      <div class="loader"></div>
+    </div>
+    <!-- ############## Page Loading Animation - End ############### -->
+
+    <div id="body" style="display: none">
+      <!-- ############## Background Star Animation ############### -->
+      <section class="wrapper">
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+      </section>
+      <!-- ############## Background Star Animation - End ############### -->
+
+      <!-- ############## Navigation Bar ############### -->
+      <nav>
+        <div class="logo"><img class="logo" src="final fr.png" alt=""></div>
+        <ul id="navbar-links">
+          <li><a class="navbar-a1" href="index.html">Home</a></li>
+          <li><a class="navbar-a1" href="./aboutUs.html">About Us</a></li>
+          <li>
+            <a class="navbar-a1" href="latest.html" target="_blank"
+              >Events</a
+            >
+          </li>
+          <li>
+            <a class="navbar-a1" href="https://blogs.nasa.gov/" target="_blank"
+              >Latest News</a
+            >
+          </li>
+          <li>
+            <a class="navbar-a1" href="https://blogs.nasa.gov/" target="_blank"
+              >Photos</a
+            >
+          </li>
+          <!-- <li><a class="navbar-a1" href="./contactUs.html">Contact Us</a></li> -->
+        </ul>
+        <div class="nav-links">
+          <ul></ul>
+        </div>
+      </nav>
+
+      <!-- ############## User Image Hover Box - End ############### -->
+
+      <!-- ############## Earth-Space Parallax Effect ############### -->
+      <section id="sectionone" class="screen">
+        <div id="scene">
+          <div data-depth="0.1" class="bg">
+            <img src="images/landingPageAssets/background.png" alt="" />
+          </div>
+          <div data-depth="0.2" class="rock1">
+            <img src="images/landingPageAssets/rock.png" alt="" />
+          </div>
+          <div data-depth="1.2" class="earth">
+            <img src="images/landingPageAssets/earth.png" alt="" />
+          </div>
+          <div data-depth="0.1" class="text">
+            <h1>Astronomy BU</h1>
+          </div>
+          <div data-depth="0.4" class="mid">
+            <img src="images/landingPageAssets/mid.png" alt="" />
+          </div>
+          <div data-depth="0.1" class="fore">
+            <img src="images/landingPageAssets/foreground.png" alt="" />
+          </div>
+        </div>
+      </section>
+      <!-- ############## Earth-Space Parallax Effect - End ############### -->
+
+      <!-- ############## Image Slider ############### -->
+      <section id="sectiontwo" class="screen">
+        <div id="slider">
+          <!-- <input type="radio" name="slider" id="slide1" checked /> -->
+
+          <div id="slides">
+            <div id="overflow">
+              <div class="inner">
+                <a href="latest.html">
+                  <div class="slide slide_1">
+                    <div class="slide-content">
+                      <h2 class="slide-text">Latest Event</h2>
+                      <p>Register Now</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ScriptHeader">
+          About US
+          <div class="rt-heading">
+            Lorem, ipsum dolor sit amet consectetur adipisicing
+            elit. Ad nam, quae molestiae ipsa tenetur aut velit!
+            Sequi magnam vel alias consequuntur pariatur excepturi
+            doloribus quos nesciunt esse possimus est aperiam
+            repellat quae sit officia itaque, rerum quam blanditiis
+            suscipit, reiciendis explicabo, quia distinctio? Maxime
+            reiciendis harum nihil alias illo fugit.
+          </div>
+        </div>
+        <!-- ############## Rock Parallax ############### -->
+        <div>
+          <div class="rockbg1">
+            <img src="images/landingPageAssets/rock.png" alt="" />
+          </div>
+          <div class="planet-links"></div>
+        </div>
+        <!-- ############## Rock Parallax - End ############### -->
+      </section>
+      
+      <!-- ############## Heads photo Carousel Heading ############### -->
+      <header class="ScriptHeader">
+
+        <div class="rt-container">
+          <div class="col-rt-12">
+            <div class="rt-heading">
+              <h1>Our Heads</h1>
+              <br><br>
+              <h2>Astronomy Club at Bennett University</h2>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- ############## Products Carousel Heading - End ############### -->
+
+      <!-- ############## Products Carousel ############### -->
+      <section id="sectionthree">
+        <div class="rt-container">
+          <div class="col-rt-12">
+            <div class="carousel-container">
+              <div class="carousel">
+               
+                <div class="carousel__screen">
+                  <div class="carousel__track">
+                    <div
+                      class="carousel__item carousel__item--mobile-in-1 carousel__item--tablet-in-2 carousel__item--desktop-in-3"
+                    >
+                      <div class="carousel-content">
+                        <!-- ############## Pushable Button ############### -->
+
+                        <img class="imageee"
+                          src="https://avatars.githubusercontent.com/u/129139486?s=400&u=ab1e36746498ac43c783da0baae0363aaffa8d16&v=4"
+                          alt="this is an image"
+                        />
+                        <button class="button-pushable" role="button">
+                          <span class="button-shadow"></span>
+                          <span class="button-edge"></span>
+                        </button>
+
+                        <!-- ############## Pushable Button - End ############### -->
+                      </div>
+                    </div>
+                    <div
+                      class="carousel__item carousel__item--mobile-in-1 carousel__item--tablet-in-2 carousel__item--desktop-in-3"
+                    >
+                      <div class="carousel-content">
+                        <!-- ############## Pushable Button ############### -->
+                        <img class="imageee"
+                          src="https://avatars.githubusercontent.com/u/129139486?s=400&u=ab1e36746498ac43c783da0baae0363aaffa8d16&v=4"
+                          alt=""
+                        />
+                        <button class="button-pushable" role="button">
+                          <span class="button-shadow"></span>
+                          <span class="button-edge"></span>
+                        </button>
+
+                        <!-- ############## Pushable Button - End ############### -->
+                      </div>
+                    </div>
+                    
+                    <div
+                      class="carousel__item carousel__item--mobile-in-1 carousel__item--tablet-in-2 carousel__item--desktop-in-3"
+                    >
+                      <div class="carousel-content">
+                        <!-- ############## Pushable Button ############### -->
+                       <img class="imageee" 
+                       src="https://avatars.githubusercontent.com/u/129139486?s=400&u=ab1e36746498ac43c783da0baae0363aaffa8d16&v=4" alt="">
+                          <button class="button-pushable" role="button">
+                            <span class="button-shadow"></span>
+                            <span class="button-edge"></span>
+                          </button>
+                     
+                        <!-- ############## Pushable Button - End ############### -->
+                      </div>
+                    </div>
+
+                    <div
+                      class="carousel__item carousel__item--mobile-in-1 carousel__item--tablet-in-2 carousel__item--desktop-in-3"
+                    >
+                      <div class="carousel-content">
+                        <!-- ############## Pushable Button ############### -->
+                       <img class="imageee" 
+                       src="https://avatars.githubusercontent.com/u/129139486?s=400&u=ab1e36746498ac43c783da0baae0363aaffa8d16&v=4" alt=" this is just for demo">
+                          <button class="button-pushable" role="button">
+                            <span class="button-shadow"></span>
+                            <span class="button-edge"></span>
+                          </button>
+                     
+                        <!-- ############## Pushable Button - End ############### -->
+                      </div>
+                    </div>
+
+                  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ############## Products Carousel - End ############### -->
+
+      <!-- ############## Page Footer ############### -->
+      <div id="footer">
+        <p>Astronomy 2024 &nbsp; &copy; &nbsp; Vaibhav Kothari</p>
+      </div>
+     
+        <div id="stars" style="margin: bottom -450px; ;"></div>
+        <!-- <div id="stars2"></div> -->
+        <!-- <div id="stars3"></div> -->
+     
+      <!-- ############## Page Footer - End ############### -->
+    </div>
+    <!-- <div style="margin-bottom: -500px;">Helloworld</div> -->
+
+    <!-- ############## Scripts ############### -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <script src="./JavaScript/index.js" type="text/javascript"></script>
+    <script src="./JavaScript/loader.js" type="text/javascript"></script>
+    <!-- <script src="./JavaScript/userBox.js" type="text/javascript"></script> -->
+    <!-- ############## Scripts - End ############### -->
+  </body>
+</html>

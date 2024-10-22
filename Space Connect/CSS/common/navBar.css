@@ -1,0 +1,61 @@
+nav {
+  position: fixed;
+  z-index: 100;
+  height: 8vh;
+  width: 96%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  cursor: url("../../images/landingPageAssets/night-blue-cursor.ico"), default;
+}
+
+  .logo{
+    margin-top: 10px;
+    width:  80px;
+    height: 80px;
+    object-fit: cover;  
+}
+.logo a {
+  font-family: "AlphaCentauri Medium" !important;
+  color: #fff;
+  font-weight: 600;
+  font-size: 20px;
+  text-decoration: none;
+}
+a:hover {
+  color: #ccc;
+}
+
+#navbar-links {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  width: 140vh;
+}
+.navbar-a1 {
+  text-decoration: none;
+  color: #fff;
+  margin-left: 5px;
+  font-size: 20px;
+  font-weight: bolder;
+  font-family: "Orbitron", sans-serif;
+}
+
+nav .nav-links ul {
+  display: flex;
+  flex-direction: row;
+}
+
+nav .nav-links ul li {
+  padding: 0 4px;
+  list-style: none;
+}
+
+nav .nav-links ul li img {
+  transform: scale(0.45);
+}
